@@ -1,0 +1,410 @@
+{
+  "version": "1.1",
+  "engine": "darwin|Transformer|1.40.3|155f1b79556b7d100726f5ef4633f81a6ed27a2b|2023-07-13_07:46:40AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "",
+    "version": "",
+    "display_name": "Big Sur (11.6)"
+  },
+  "type": "build",
+  "state": "done",
+  "target_reference": "petclinic:1.0",
+  "system": {
+    "type": "",
+    "release": "",
+    "distro": {
+      "name": "",
+      "version": "",
+      "display_name": ""
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:77429e89e15c51001da76984bf5f72fc4729818485b08e6bc58d73a59810fe25",
+      "tags": [
+        "1.0"
+      ],
+      "names": [
+        "petclinic:1.0"
+      ]
+    },
+    "size": 706810712,
+    "size_human": "707 MB",
+    "create_time": "2023-09-06T05:41:27Z",
+    "docker_version": "",
+    "architecture": "amd64",
+    "exposed_ports": [
+      "8080/tcp"
+    ],
+    "os": "linux",
+    "env_vars": [
+      "PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "JAVA_HOME=/usr/local/openjdk-11",
+      "LANG=C.UTF-8",
+      "JAVA_VERSION=11.0.16"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 236188430,
+  "minified_image_size_human": "236 MB",
+  "minified_image": "petclinic.slim",
+  "minified_image_has_data": true,
+  "minified_by": 2.992571278787873,
+  "artifact_location": "/tmp/slim-state/.slim-state/images/77429e89e15c51001da76984bf5f72fc4729818485b08e6bc58d73a59810fe25/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "petclinic-seccomp.json",
+  "apparmor_profile_name": "petclinic-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:77429e89e15c51001da76984bf5f72fc4729818485b08e6bc58d73a59810fe25",
+      "full_name": "petclinic:1.0",
+      "repo_name": "petclinic",
+      "version_tag": "1.0",
+      "raw_tags": [
+        "petclinic:1.0"
+      ],
+      "create_time": "2023-09-06T05:41:27Z",
+      "new_size": 706810712,
+      "new_size_human": "707 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2022-08-02T01:19:54Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 123984533,
+          "size_human": "124 MB",
+          "params": "file:d0f758e50c654c225f6c7f03e8a579efc9106437051573bdbae5e63b1c4b2c1f in /",
+          "command_snippet": "ADD file:d0f758e50c654c225f6c7f03e8a579efc91...",
+          "command_all": "ADD file:d0f758e50c654c225f6c7f03e8a579efc9106437051573bdbae5e63b1c4b2c1f /",
+          "target": "/",
+          "source_type": "file",
+          "inst_set_time_bucket": "2022-08-02T06:45:00+05:30",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 3
+        },
+        {
+          "type": "CMD",
+          "time": "2022-08-02T01:19:54Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"bash\"]\n",
+          "command_snippet": "CMD [\"bash\"]\n",
+          "command_all": "CMD [\"bash\"]\n",
+          "inst_set_time_bucket": "2022-08-02T06:45:00+05:30",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 3
+        },
+        {
+          "type": "RUN",
+          "time": "2022-08-02T01:46:56Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 10687463,
+          "size_human": "11 MB",
+          "command_snippet": "RUN set -eux; \tapt-get update; \tapt-get inst...",
+          "command_all": "RUN set -eux; \tapt-get update; \tapt-get install -y --no-install-recommends \t\tca-certificates \t\tcurl \t\tnetbase \t\twget \t; \trm -rf /var/lib/apt/lists/*",
+          "system_commands": [
+            "set -eux",
+            "apt-get update",
+            "apt-get install -y --no-install-recommends ca-certificates curl netbase wget",
+            "rm -rf /var/lib/apt/lists/*"
+          ],
+          "inst_set_time_bucket": "2022-08-02T07:15:00+05:30",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "RUN",
+          "time": "2022-08-02T01:47:01Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 18951711,
+          "size_human": "19 MB",
+          "command_snippet": "RUN set -ex; \tif ! command -v gpg > /dev/nul...",
+          "command_all": "RUN set -ex; \tif ! command -v gpg > /dev/null; then \t\tapt-get update; \t\tapt-get install -y --no-install-recommends \t\t\tgnupg \t\t\tdirmngr \t\t; \t\trm -rf /var/lib/apt/lists/*; \tfi",
+          "system_commands": [
+            "set -ex",
+            "if ! command -v gpg > /dev/null",
+            "then apt-get update",
+            "apt-get install -y --no-install-recommends gnupg dirmngr",
+            "rm -rf /var/lib/apt/lists/*",
+            "fi"
+          ],
+          "inst_set_time_bucket": "2022-08-02T07:15:00+05:30",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "RUN",
+          "time": "2022-08-02T01:47:17Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 151951910,
+          "size_human": "152 MB",
+          "command_snippet": "RUN apt-get update && \\\n\tapt-get install -y ...",
+          "command_all": "RUN apt-get update && \\\n\tapt-get install -y --no-install-recommends \t\tgit \t\tmercurial \t\topenssh-client \t\tsubversion \t\t\t\tprocps && \\\n\trm -rf /var/lib/apt/lists/*",
+          "system_commands": [
+            "apt-get update",
+            "apt-get install -y --no-install-recommends git mercurial openssh-client subversion procps",
+            "rm -rf /var/lib/apt/lists/*"
+          ],
+          "inst_set_time_bucket": "2022-08-02T07:15:00+05:30",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "RUN",
+          "time": "2022-08-02T05:51:54Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 11317623,
+          "size_human": "11 MB",
+          "command_snippet": "RUN set -eux; \tapt-get update; \tapt-get inst...",
+          "command_all": "RUN set -eux; \tapt-get update; \tapt-get install -y --no-install-recommends \t\tbzip2 \t\tunzip \t\txz-utils \t\t\t\tfontconfig libfreetype6 \t\t\t\tca-certificates p11-kit \t; \trm -rf /var/lib/apt/lists/*",
+          "system_commands": [
+            "set -eux",
+            "apt-get update",
+            "apt-get install -y --no-install-recommends bzip2 unzip xz-utils fontconfig libfreetype6 ca-certificates p11-kit",
+            "rm -rf /var/lib/apt/lists/*"
+          ],
+          "inst_set_time_bucket": "2022-08-02T11:15:00+05:30",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "ENV",
+          "time": "2022-08-02T05:51:54Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "JAVA_HOME=/usr/local/openjdk-11",
+          "command_snippet": "ENV JAVA_HOME=/usr/local/openjdk-11",
+          "command_all": "ENV JAVA_HOME=/usr/local/openjdk-11",
+          "inst_set_time_bucket": "2022-08-02T11:15:00+05:30",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "RUN",
+          "time": "2022-08-02T05:51:55Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 27,
+          "size_human": "27 B",
+          "command_snippet": "RUN { echo '#/bin/sh'; echo 'echo \"$JAVA_HOM...",
+          "command_all": "RUN { echo '#/bin/sh'; echo 'echo \"$JAVA_HOME\"'; } > /usr/local/bin/docker-java-home && \\\n\tchmod +x /usr/local/bin/docker-java-home && \\\n\t[ \"$JAVA_HOME\" = \"$(docker-java-home)\" ] # backwards compatibility",
+          "system_commands": [
+            "{ echo '#/bin/sh'; echo 'echo \"$JAVA_HOME\"'; } > /usr/local/bin/docker-java-home",
+            "chmod +x /usr/local/bin/docker-java-home",
+            "[ \"$JAVA_HOME\" = \"$(docker-java-home)\" ] # backwards compatibility"
+          ],
+          "inst_set_time_bucket": "2022-08-02T11:15:00+05:30",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "ENV",
+          "time": "2022-08-02T05:51:55Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "command_snippet": "ENV PATH=/usr/local/openjdk-11/bin:/usr/loca...",
+          "command_all": "ENV PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "inst_set_time_bucket": "2022-08-02T11:15:00+05:30",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "ENV",
+          "time": "2022-08-02T05:51:55Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "LANG=C.UTF-8",
+          "command_snippet": "ENV LANG=C.UTF-8",
+          "command_all": "ENV LANG=C.UTF-8",
+          "inst_set_time_bucket": "2022-08-02T11:15:00+05:30",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "ENV",
+          "time": "2022-08-02T05:51:55Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "JAVA_VERSION=11.0.16",
+          "command_snippet": "ENV JAVA_VERSION=11.0.16",
+          "command_all": "ENV JAVA_VERSION=11.0.16",
+          "inst_set_time_bucket": "2022-08-02T11:15:00+05:30",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "RUN",
+          "time": "2022-08-02T05:52:11Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 337274119,
+          "size_human": "337 MB",
+          "command_snippet": "RUN set -eux; \t\tarch=\"$(dpkg --print-archite...",
+          "command_all": "RUN set -eux; \t\tarch=\"$(dpkg --print-architecture)\"; \tcase \"$arch\" in \t\t'amd64') \t\t\tdownloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.16%2B8/OpenJDK11U-jdk_x64_linux_11.0.16_8.tar.gz'; \t\t\t;; \t\t'arm64') \t\t\tdownloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.16%2B8/OpenJDK11U-jdk_aarch64_linux_11.0.16_8.tar.gz'; \t\t\t;; \t\t*) echo >&2 \"error: unsupported architecture: '$arch'\"; exit 1 ;; \tesac; \t\twget --progress=dot:giga -O openjdk.tgz \"$downloadUrl\"; \twget --progress=dot:giga -O openjdk.tgz.asc \"$downloadUrl.sign\"; \t\texport GNUPGHOME=\"$(mktemp -d)\"; \tgpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; \tgpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; \tgpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F \t\t| tee /dev/stderr \t\t| grep '0xA5CD6035332FA671' \t\t| grep 'Andrew Haley'; \tgpg --batch --verify openjdk.tgz.asc openjdk.tgz; \tgpgconf --kill all; \trm -rf \"$GNUPGHOME\"; \t\tmkdir -p \"$JAVA_HOME\"; \ttar --extract \t\t--file openjdk.tgz \t\t--directory \"$JAVA_HOME\" \t\t--strip-components 1 \t\t--no-same-owner \t; \trm openjdk.tgz*; \t\t{ \t\techo '#!/usr/bin/env bash'; \t\techo 'set -Eeuo pipefail'; \t\techo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth \"$JAVA_HOME/lib/security/cacerts\"'; \t} > /etc/ca-certificates/update.d/docker-openjdk; \tchmod +x /etc/ca-certificates/update.d/docker-openjdk; \t/etc/ca-certificates/update.d/docker-openjdk; \t\tfind \"$JAVA_HOME/lib\" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; \tldconfig; \t\tjava -Xshare:dump; \t\tfileEncoding=\"$(echo 'System.out.println(System.getProperty(\"file.encoding\"))' | jshell -s -)\"; [ \"$fileEncoding\" = 'UTF-8' ]; rm -rf ~/.java; \tjavac --version; \tjava --version",
+          "system_commands": [
+            "set -eux",
+            "arch=\"$(dpkg --print-architecture)\"",
+            "case \"$arch\" in 'amd64') downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.16%2B8/OpenJDK11U-jdk_x64_linux_11.0.16_8.tar.gz'",
+            "",
+            "",
+            "'arm64') downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.16%2B8/OpenJDK11U-jdk_aarch64_linux_11.0.16_8.tar.gz'",
+            "",
+            "",
+            "*) echo >&2 \"error: unsupported architecture: '$arch'\"",
+            "exit 1",
+            "",
+            "esac",
+            "wget --progress=dot:giga -O openjdk.tgz \"$downloadUrl\"",
+            "wget --progress=dot:giga -O openjdk.tgz.asc \"$downloadUrl.sign\"",
+            "export GNUPGHOME=\"$(mktemp -d)\"",
+            "gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671",
+            "gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F",
+            "gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F | tee /dev/stderr | grep '0xA5CD6035332FA671' | grep 'Andrew Haley'",
+            "gpg --batch --verify openjdk.tgz.asc openjdk.tgz",
+            "gpgconf --kill all",
+            "rm -rf \"$GNUPGHOME\"",
+            "mkdir -p \"$JAVA_HOME\"",
+            "tar --extract --file openjdk.tgz --directory \"$JAVA_HOME\" --strip-components 1 --no-same-owner",
+            "rm openjdk.tgz*",
+            "{ echo '#!/usr/bin/env bash'",
+            "echo 'set -Eeuo pipefail'",
+            "echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth \"$JAVA_HOME/lib/security/cacerts\"'",
+            "} > /etc/ca-certificates/update.d/docker-openjdk",
+            "chmod +x /etc/ca-certificates/update.d/docker-openjdk",
+            "/etc/ca-certificates/update.d/docker-openjdk",
+            "find \"$JAVA_HOME/lib\" -name '*.so' -exec dirname '{}' '",
+            "' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf",
+            "ldconfig",
+            "java -Xshare:dump",
+            "fileEncoding=\"$(echo 'System.out.println(System.getProperty(\"file.encoding\"))' | jshell -s -)\"",
+            "[ \"$fileEncoding\" = 'UTF-8' ]",
+            "rm -rf ~/.java",
+            "javac --version",
+            "java --version"
+          ],
+          "inst_set_time_bucket": "2022-08-02T11:15:00+05:30",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "CMD",
+          "time": "2022-08-02T05:52:12Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"jshell\"]\n",
+          "command_snippet": "CMD [\"jshell\"]\n",
+          "command_all": "CMD [\"jshell\"]\n",
+          "inst_set_time_bucket": "2022-08-02T11:15:00+05:30",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "COPY",
+          "time": "2023-09-06T05:41:27Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 52643326,
+          "size_human": "53 MB",
+          "params": "files/spring-petclinic-2.7.3.jar /usr/src/spring-petclinic-2.7.3.jar",
+          "command_snippet": "COPY files/spring-petclinic-2.7.3.jar /usr/s...",
+          "command_all": "COPY files/spring-petclinic-2.7.3.jar /usr/src/spring-petclinic-2.7.3.jar",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2023-09-06T11:00:00+05:30",
+          "inst_set_time_index": 3,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "WORKDIR",
+          "time": "2023-09-06T05:41:27Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "/usr/src",
+          "command_snippet": "WORKDIR /usr/src",
+          "command_all": "WORKDIR /usr/src",
+          "system_commands": [
+            "mkdir -p /usr/src"
+          ],
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2023-09-06T11:00:00+05:30",
+          "inst_set_time_index": 3,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "EXPOSE",
+          "time": "2023-09-06T05:41:27Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "8080/tcp",
+          "command_snippet": "EXPOSE 8080/tcp",
+          "command_all": "EXPOSE 8080/tcp",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2023-09-06T11:00:00+05:30",
+          "inst_set_time_index": 3,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "CMD",
+          "time": "2023-09-06T05:41:27Z",
+          "is_last_instruction": true,
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"java\",\"-jar\",\"spring-petclinic-2.7.3.jar\"]\n",
+          "command_snippet": "CMD [\"java\",\"-jar\",\"spring-petclinic-2.7.3.j...",
+          "command_all": "CMD [\"java\",\"-jar\",\"spring-petclinic-2.7.3.jar\"]\n",
+          "comment": "buildkit.dockerfile.v0",
+          "raw_tags": [
+            "petclinic:1.0"
+          ],
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2023-09-06T11:00:00+05:30",
+          "inst_set_time_index": 3,
+          "inst_set_time_reverse_index": 0
+        }
+      ]
+    }
+  ],
+  "image_created": true,
+  "image_build_engine": "docker"
+}

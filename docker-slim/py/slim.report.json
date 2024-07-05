@@ -1,0 +1,296 @@
+{
+  "version": "1.1",
+  "engine": "darwin|Transformer|1.40.6|df98aa8c0e3ed3b15a25925cc07c1b54a5a6627a|2023-11-02_06:03:34PM",
+  "containerized": false,
+  "host_distro": {
+    "name": "",
+    "version": "",
+    "display_name": "Big Sur (11.6)"
+  },
+  "type": "build",
+  "state": "done",
+  "target_reference": "flask:1.0",
+  "system": {
+    "type": "",
+    "release": "",
+    "distro": {
+      "name": "",
+      "version": "",
+      "display_name": ""
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:e169f0dff577f6b794a2f23ae1f335d5a420068bb6da2778eb11eb505a7cfb5d",
+      "tags": [
+        "1.0.0",
+        "1.0",
+        "1.0.0"
+      ],
+      "names": [
+        "aswinvj/python-flask:1.0.0",
+        "flask:1.0",
+        "techiescamp/flask-application:1.0.0"
+      ],
+      "digests": [
+        "sha256:73b18a1e474799e6a48325a82ab1ca53cf4bdcd21f3daa7b4feb2684d7d77b43",
+        "sha256:73b18a1e474799e6a48325a82ab1ca53cf4bdcd21f3daa7b4feb2684d7d77b43"
+      ],
+      "full_digests": [
+        "aswinvj/python-flask@sha256:73b18a1e474799e6a48325a82ab1ca53cf4bdcd21f3daa7b4feb2684d7d77b43",
+        "techiescamp/flask-application@sha256:73b18a1e474799e6a48325a82ab1ca53cf4bdcd21f3daa7b4feb2684d7d77b43"
+      ]
+    },
+    "size": 480400461,
+    "size_human": "480 MB",
+    "create_time": "2024-04-04T10:50:18Z",
+    "docker_version": "",
+    "architecture": "amd64",
+    "exposed_ports": [
+      "5000/tcp"
+    ],
+    "os": "linux",
+    "labels": {
+      "org.opencontainers.image.ref.name": "ubuntu",
+      "org.opencontainers.image.version": "22.04"
+    },
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 25344110,
+  "minified_image_size_human": "25 MB",
+  "minified_image": "slimmed-flask:2.0",
+  "minified_image_has_data": true,
+  "minified_by": 18.955112686931994,
+  "artifact_location": "/tmp/slim-state/.slim-state/images/e169f0dff577f6b794a2f23ae1f335d5a420068bb6da2778eb11eb505a7cfb5d/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "flask-seccomp.json",
+  "apparmor_profile_name": "flask-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:e169f0dff577f6b794a2f23ae1f335d5a420068bb6da2778eb11eb505a7cfb5d",
+      "full_name": "aswinvj/python-flask:1.0.0",
+      "repo_name": "aswinvj/python-flask",
+      "version_tag": "1.0.0",
+      "raw_tags": [
+        "aswinvj/python-flask:1.0.0",
+        "flask:1.0",
+        "techiescamp/flask-application:1.0.0"
+      ],
+      "create_time": "2024-04-04T10:50:18Z",
+      "new_size": 480400461,
+      "new_size_human": "480 MB",
+      "instructions": [
+        {
+          "type": "ARG",
+          "time": "2024-02-27T18:52:57Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "RELEASE",
+          "command_snippet": "ARG RELEASE",
+          "command_all": "ARG RELEASE",
+          "inst_set_time_bucket": "2024-02-28T00:15:00+05:30",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "ARG",
+          "time": "2024-02-27T18:52:57Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "LAUNCHPAD_BUILD_ARCH",
+          "command_snippet": "ARG LAUNCHPAD_BUILD_ARCH",
+          "command_all": "ARG LAUNCHPAD_BUILD_ARCH",
+          "inst_set_time_bucket": "2024-02-28T00:15:00+05:30",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "LABEL",
+          "time": "2024-02-27T18:52:57Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "org.opencontainers.image.ref.name=ubuntu",
+          "command_snippet": "LABEL org.opencontainers.image.ref.name=ubun...",
+          "command_all": "LABEL org.opencontainers.image.ref.name=ubuntu",
+          "inst_set_time_bucket": "2024-02-28T00:15:00+05:30",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "LABEL",
+          "time": "2024-02-27T18:52:57Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "org.opencontainers.image.version=22.04",
+          "command_snippet": "LABEL org.opencontainers.image.version=22.04",
+          "command_all": "LABEL org.opencontainers.image.version=22.04",
+          "inst_set_time_bucket": "2024-02-28T00:15:00+05:30",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "ADD",
+          "time": "2024-02-27T18:52:58Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 77861158,
+          "size_human": "78 MB",
+          "params": "file:21c2e8d95909bec6f4acdaf4aed55b44ee13603681f93b152e423e3e6a4a207b in /",
+          "command_snippet": "ADD file:21c2e8d95909bec6f4acdaf4aed55b44ee1...",
+          "command_all": "ADD file:21c2e8d95909bec6f4acdaf4aed55b44ee13603681f93b152e423e3e6a4a207b /",
+          "target": "/",
+          "source_type": "file",
+          "inst_set_time_bucket": "2024-02-28T00:15:00+05:30",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "CMD",
+          "time": "2024-02-27T18:52:59Z",
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/bin/bash\"]\n",
+          "command_snippet": "CMD [\"/bin/bash\"]\n",
+          "command_all": "CMD [\"/bin/bash\"]\n",
+          "inst_set_time_bucket": "2024-02-28T00:15:00+05:30",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "RUN",
+          "time": "2024-04-04T10:37:27Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 397951965,
+          "size_human": "398 MB",
+          "command_snippet": "RUN apt-get update && \\\n\tapt-get install -y ...",
+          "command_all": "RUN apt-get update && \\\n\tapt-get install -y python3 python3-pip",
+          "system_commands": [
+            "apt-get update",
+            "apt-get install -y python3 python3-pip"
+          ],
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2024-04-04T16:00:00+05:30",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "WORKDIR",
+          "time": "2024-04-04T10:37:27Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "/app",
+          "command_snippet": "WORKDIR /app",
+          "command_all": "WORKDIR /app",
+          "system_commands": [
+            "mkdir -p /app"
+          ],
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2024-04-04T16:00:00+05:30",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "COPY",
+          "time": "2024-04-04T10:50:12Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 664,
+          "size_human": "664 B",
+          "params": ". /app",
+          "command_snippet": "COPY . /app",
+          "command_all": "COPY . /app",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2024-04-04T16:15:00+05:30",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "RUN",
+          "time": "2024-04-04T10:50:18Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 4586674,
+          "size_human": "4.6 MB",
+          "command_snippet": "RUN pip install Flask",
+          "command_all": "RUN pip install Flask",
+          "system_commands": [
+            "pip install Flask"
+          ],
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2024-04-04T16:15:00+05:30",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "EXPOSE",
+          "time": "2024-04-04T10:50:18Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "5000/tcp",
+          "command_snippet": "EXPOSE 5000/tcp",
+          "command_all": "EXPOSE 5000/tcp",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2024-04-04T16:15:00+05:30",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "CMD",
+          "time": "2024-04-04T10:50:18Z",
+          "is_last_instruction": true,
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"python3\",\"hello.py\"]\n",
+          "command_snippet": "CMD [\"python3\",\"hello.py\"]\n",
+          "command_all": "CMD [\"python3\",\"hello.py\"]\n",
+          "comment": "buildkit.dockerfile.v0",
+          "raw_tags": [
+            "aswinvj/python-flask:1.0.0",
+            "flask:1.0",
+            "techiescamp/flask-application:1.0.0"
+          ],
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2024-04-04T16:15:00+05:30",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 0
+        }
+      ]
+    }
+  ],
+  "image_created": true,
+  "image_build_engine": "internal"
+}
